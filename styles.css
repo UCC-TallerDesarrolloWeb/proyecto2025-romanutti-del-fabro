@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; /* Fondo transparente */
+    padding: 10px 20px;
+    position: absolute; /* Posición absoluta para flotar sobre la imagen */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; /* Encima de la imagen */
+}
+.title {
+    font-size: 2em;
+    color: white; /* Texto blanco para contraste */
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para legibilidad */
+}
+.menu-button{
+    display: flex;
+    align-items: center;
+    color: white; /* Color blanco para el menú */
+}
+
+.menu-button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.menu-button svg {
+    fill: white; /* SVG en blanco */
+    margin-right: 5px; /* Espacio entre el SVG y el texto */
+}
+
+.menu-button p {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Estilos para que la imagen se mezcle con el header */
+main {
+    position: relative;
+    margin-top: 0; /* Sin margen superior */
+}
+
+/* Contenedor específico para la imagen hero */
+.hero-section {
+    position: relative;
+    height: 100vh; /* Altura fija de la ventana */
+    overflow: hidden; /* Evita que el contenido se salga */
+}
+
+.hero-section img {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    position: relative;
+    object-fit: cover;
+    z-index: 1; /* Debajo del header */
+}
+
+/* Degradado negro específicamente sobre la imagen */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8) 0%,    /* Negro más intenso arriba */
+        rgba(0, 0, 0, 0.4) 25%,   /* Transición más gradual */
+        rgba(0, 0, 0, 0.1) 40%,   /* Ligeramente visible */
+        rgba(0, 0, 0, 0) 50%,     /* Completamente transparente en el centro */
+        rgba(0, 0, 0, 0.1) 60%,   /* Ligeramente visible */
+        rgba(0, 0, 0, 0.4) 75%,   /* Transición más gradual */
+        rgba(0, 0, 0, 0.8) 100%   /* Negro más intenso abajo */
+    );
+    z-index: 2; /* Encima de la imagen */
+    pointer-events: none; /* Permite interacción con elementos debajo */
+}
+
+.image-text {
+    font-size: 4em;
+    z-index: 5; /* Encima del degradado */
+    position: absolute; /* Absoluto dentro del contenedor hero */
+    top: 70%; /* Relativo al contenedor hero, no al main completo */
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    background-color: none;
+}
+
+.content{
+    background-color: #222222;
+    color: white;
+    position: relative;
+    z-index: 5; /* Por encima de todo el contenido del main */
+    padding: 40px 20px; /* Espaciado interno */
+    margin: 0; /* Sin márgenes */
+    width: 100%; /* Ancho completo */
+    box-sizing: border-box; /* Incluir padding en el ancho */
+}
