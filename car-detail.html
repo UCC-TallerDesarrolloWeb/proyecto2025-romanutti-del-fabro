@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Auto - FastCars</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body class="page-car-detail">
+    <header>
+        <div class="title-container">
+            <h1 class="title">FASTCARS</h1>
+        </div>
+        <nav class="breadcrumb">
+            <a href="../index.html">HOME</a> / 
+            <a href="catalogo.html">CATALOGO</a> / 
+            <span id="breadcrumb-model">Cargando...</span>
+        </nav>
+    </header>
+    
+    <main class="car-container">
+        <div class="car-layout">
+            <div class="car-image-section">
+                <img id="car-image" src="" alt="" class="car-image" />
+            </div>
+            <div class="car-info-section">
+                <div id="car-year-km" class="car-year-km"></div>
+                <div id="car-price" class="car-price"></div>
+                <div class="car-specs">
+                    <p id="car-engine"></p>
+                    <p id="car-transmission"></p>
+                </div>
+                <button class="schedule-btn">Agendá tu visita</button>
+                <div class="car-description">
+                    <p id="car-description"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./assets/js/cars-data.js"></script> 
+    <script src="./assets/js/car-detail-script.js"></script>
+</body>
+</html>

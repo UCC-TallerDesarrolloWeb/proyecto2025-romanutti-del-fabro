@@ -364,7 +364,7 @@ main {
 }
 
 .cta-section {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url("portada.png");
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url("./img/portada.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

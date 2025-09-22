@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - FastCars</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="page-catalog">
+    <header>
+        <div class="title-container">
+            <h1 class="title">FASTCARS</h1>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Buscar autos...">
+            <button class="search-button">🔍</button>
+        </div>
+        
+        <nav class="breadcrumb">
+            <a href="index.html">HOME</a> / 
+            <span><u>CATALOGO</u></span>
+        </nav>
+        
+        <div class="filters-container">
+            <select class="filter-dropdown">
+                <option>Filtrar por marca</option>
+                <option>Porsche</option>
+                <option>BMW</option>
+                <option>Ferrari</option>
+                <option>Lamborghini</option>
+            </select>
+            <select class="filter-dropdown">
+                <option>Filtrar por Año</option>
+                <option>2024</option>
+                <option>2023</option>
+                <option>2022</option>
+                <option>2021</option>
+            </select>
+            <select class="filter-dropdown">
+                <option>Carrocería</option>
+                <option>Coupé</option>
+                <option>Convertible</option>
+            </select>
+            <select class="filter-dropdown">
+                <option>Filtrar por precio</option>
+                <option>$0 - $150.000</option>
+                <option>$150.000 - $300.000</option>
+                <option>$300.000+</option>
+            </select>
+        </div>
+    </header>
+    
+    <main class="catalog-container">
+        <div class="cars-grid" id="cars-grid">
+            <!-- Las cards se generarán dinámicamente -->
+        </div>
+    </main>
+
+    <script src="assets/js/cars-data.js"></script>
+    <script src="assets/js/catalog-script.js"></script>
+</body>
+</html>
