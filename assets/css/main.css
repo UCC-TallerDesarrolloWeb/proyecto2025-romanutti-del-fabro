@@ -16,6 +16,9 @@ Proyecto 2025 - Primer Parcial
 body {
     line-height: 1.6;
     color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -46,7 +49,7 @@ a {
     visibility: hidden;
 }
 
-.title {
+#title {
     font-size: 1.5em;
     color: white;
     text-align: center;
@@ -84,6 +87,12 @@ a {
 main {
     position: relative;
     margin-top: 0;
+    flex: 1;
+}
+
+/* Para páginas específicas que usan flex layout */
+.contact-container {
+    flex: 1;
 }
 
 /* === HERO SECTION === */
@@ -274,6 +283,19 @@ main {
 }
 
 /* === GRID DE ÚLTIMOS INGRESOS === */
+
+#subtitle {
+    margin: 10px 0;
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 300;
+    background-clip: text;
+}
+
 .last-cars-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -526,6 +548,8 @@ main {
 /* Especificidad para páginas de catálogo */
 .page-catalog {
     background-color: #1a1a1a;
+    min-height: 100vh;
+    display: block;
 }
 
 .page-catalog header {
@@ -561,7 +585,7 @@ main {
     gap: 0;
 }
 
-.search-bar {
+#search-bar {
     padding: 15px 20px;
     border: none;
     border-radius: 25px 0 0 25px;
@@ -846,6 +870,152 @@ main {
     margin: 0;
 }
 
+
+
+/* ========================================
+   ESTILOS PARA PÁGINA DE CONTACTO
+======================================== */
+
+.page-contact {
+    background-color: #1a1a1a;
+    color: #cccccc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-contact header {
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+.page-contact .title {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    background: linear-gradient(45deg, #ffffff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-container {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-container > p {
+    font-size: 1.2em;
+    color: #cccccc;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    background-color: #2d2d2d;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #4a9eff;
+    box-shadow: 0 0 10px rgba(74, 158, 255, 0.3);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    background: linear-gradient(135deg, #4a9eff 0%, #357abd 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 158, 255, 0.3);
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 158, 255, 0.4);
+    background: linear-gradient(135deg, #357abd 0%, #2a5f94 100%);
+}
+
+.contact-info {
+    background-color: #2d2d2d;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 40px;
+}
+
+.contact-info h3 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-info p {
+    color: #cccccc;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
 /* ========================================
    FOOTER
 ======================================== */
@@ -871,7 +1041,7 @@ footer {
         font-size: 2em;
     }
     
-    .search-bar {
+    #search-bar {
         width: 250px;
     }
     
@@ -963,7 +1133,7 @@ footer {
         gap: 10px;
     }
     
-    .search-bar, .search-button {
+    #search-bar, .search-button {
         border-radius: 25px;
         width: 100%;
         max-width: 300px;

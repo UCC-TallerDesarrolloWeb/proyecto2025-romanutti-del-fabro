@@ -1,7 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const carsGrid = document.getElementById('cars-grid');
-    
+function obtenerFiltros() {
+        const filtros = {
+            busqueda: searchBar.value.toLowerCase(),
+            marca: filterDropdowns[0].value,
+            año: filterDropdowns[1].value,
+            carroceria: filterDropdowns[2].value,
+            precio: filterDropdowns[3].value
+        };
+        
+        console.log('Filtros actuales:', filtros);
+        return filtros;
+    }
+
     function generateCarCards() {
+        const carsGrid = document.getElementById('cars-grid');
         carsGrid.innerHTML = '';
         
         Object.keys(carsData).forEach(carId => {
@@ -29,6 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
             carsGrid.appendChild(carCard);
         });
     }
+
+
+document.addEventListener('DOMContentLoaded', function() {
     
     // Generar las cards al cargar la página
     generateCarCards();
