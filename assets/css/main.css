@@ -664,6 +664,42 @@ main {
     background-color: #e0e0e0;
 }
 
+/* Nuevo contenedor para filtros de precio */
+.price-filter-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 180px;
+    transition: background-color 0.3s ease;
+}
+
+.price-filter-container:hover {
+    background-color: #e0e0e0;
+}
+
+.price-input {
+    border: none;
+    background: transparent;
+    color: #333;
+    font-size: 1em;
+    padding: 7px 15px;
+    outline: none;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.price-input::placeholder {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.price-input:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 .catalog-container {
     padding: 0 20px 40px;
     max-width: 1200px;
@@ -1041,7 +1077,7 @@ footer {
         font-size: 2em;
     }
     
-    #search-bar {
+    .search-bar {
         width: 250px;
     }
     
@@ -1177,4 +1213,20 @@ footer {
         width: 100%;
         text-align: center;
     }
+}
+
+/* Estilos específicos para el input de búsqueda integrado con filtros */
+.search-input {
+    cursor: text !important;
+    min-width: 250px;
+}
+
+.search-input::placeholder {
+    color: #666;
+    font-style: italic;
+}
+
+.search-input:focus {
+    background-color: #e8f4fd;
+    box-shadow: 0 0 5px rgba(74, 158, 255, 0.3);
 }
