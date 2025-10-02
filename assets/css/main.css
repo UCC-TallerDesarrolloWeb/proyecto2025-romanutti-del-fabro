@@ -1217,8 +1217,10 @@ footer {
 
 /* Estilos específicos para el input de búsqueda integrado con filtros */
 .search-input {
-    cursor: text !important;
     min-width: 250px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
 }
 
 .search-input::placeholder {
@@ -1229,4 +1231,5 @@ footer {
 .search-input:focus {
     background-color: #e8f4fd;
     box-shadow: 0 0 5px rgba(74, 158, 255, 0.3);
+    
 }
