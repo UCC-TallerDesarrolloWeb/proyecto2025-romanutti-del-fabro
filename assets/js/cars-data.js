@@ -41,6 +41,28 @@ const carsData = [    {
         transmission: "Tracción Integral",
         image: "assets/images/cars/4.jpg",
         description: "Superdeportivo italiano que combina elegancia y potencia en cada detalle."
+    },
+    {
+        brand: "Porsche",
+        model: "Cayenne",
+        year: 2023,
+        price: "$95.000",
+        km: "25.000 km",
+        engine: "V6 3.0 turbo",
+        transmission: "Tracción Integral",
+        image: "assets/images/cars/PorscheCayenne.jpg",
+        description: "SUV deportiva de lujo que combina el rendimiento Porsche con la versatilidad de un vehículo familiar premium."
+    },
+    {
+        brand: "Ford",
+        model: "Mustang Dark Horse",
+        year: 2024,
+        price: "$85.000",
+        km: "8.000 km",
+        engine: "V8 5.0 Coyote",
+        transmission: "Tracción Trasera",
+        image: "assets/images/cars/FordMustangDarkHorse.jpg",
+        description: "La versión más radical del Mustang, diseñada para ofrecer máximo rendimiento en pista y carretera."
     }
 ];
 

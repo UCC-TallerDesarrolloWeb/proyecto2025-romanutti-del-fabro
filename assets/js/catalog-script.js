@@ -1,4 +1,10 @@
-function generateCarCards(dataToShow = carsData) {
+/**
+ * Genera las tarjetas de autos en el catálogo basándose en los datos proporcionados
+ * @method generateCarCards
+ * @param {Array} dataToShow - Array de objetos con datos de autos a mostrar, por defecto usa carsData
+ * @return {void} No retorna valor, modifica el DOM directamente
+ */
+const generateCarCards = (dataToShow = carsData) => {
         const carsGrid = document.getElementById('cars-grid');
         carsGrid.innerHTML = '';
         
@@ -27,7 +33,12 @@ function generateCarCards(dataToShow = carsData) {
     }
 
 
-document.addEventListener('DOMContentLoaded', function() {
+/**
+ * Inicializa el catálogo de autos cuando el DOM está completamente cargado
+ * @method initializeCatalog
+ * @return {void} No retorna valor, configura los event listeners y genera las cards iniciales
+ */
+document.addEventListener('DOMContentLoaded', () => {
     // Generar las cards al cargar la página
     generateCarCards();
     
@@ -37,19 +48,33 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('price-max').addEventListener('input', filtrarAuto);
 });
 
-function goToCar(carId) {
+/**
+ * Redirige a la página de detalle del auto seleccionado
+ * @method goToCar
+ * @param {number} carId - Índice del auto en el array carsData
+ * @return {void} No retorna valor, redirige la página
+ */
+const goToCar = (carId) => {
     // Redirigir a la página individual con el ID del auto
     window.location.href = `car-detail.html?id=${carId}`;
 }
 
-
-
-// Función para convertir precio de string a número
-function convertirPrecioANumero(precioString) {
+/**
+ * Convierte un precio en formato string con símbolos a número entero
+ * @method convertirPrecioANumero
+ * @param {string} precioString - Precio en formato string (ej: "$120.000")
+ * @return {number} Precio convertido a número entero
+ */
+const convertirPrecioANumero = (precioString) => {
     // Eliminar $ y puntos, convertir a número
     return parseInt(precioString.replace(/[$.,]/g, ''));
 }
 
+/**
+ * Filtra los autos del catálogo según los criterios de búsqueda seleccionados
+ * @method filtrarAuto
+ * @return {void} No retorna valor, actualiza la visualización de autos filtrados
+ */
 let filtrarAuto = () => {
     let searchWord = document.getElementById("busqueda").value.toLowerCase().trim();
     let minValue = document.getElementById("price-min").value;

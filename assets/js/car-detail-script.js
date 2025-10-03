@@ -1,4 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+/**
+ * Inicializa la página de detalle del auto cargando los datos específicos del vehículo seleccionado
+ * @method DOMContentLoaded
+ * @return {void} No retorna valor, actualiza el contenido de la página con los datos del auto
+ */
+document.addEventListener('DOMContentLoaded', () => {
     // Obtener el ID del auto desde la URL
     const urlParams = new URLSearchParams(window.location.search);
     const carId = urlParams.get('id');
