@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto - FastCars</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <script src="./assets/js/contact-script.js" defer></script>
   </head>
   <body class="page-contact">
     <header>
@@ -25,9 +27,10 @@
         ayudarte!
       </p>
 
-      <form class="contact-form">
+      <form class="contact-form" onsubmit="errorVer(event)">
+        <p id="error-message" class="error-message"></p>
         <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required placeholder="Nombre y Apellido" />
+        <input type="text" id="name" name="name" required placeholder="Nombre y Apellido"/>
 
         <label for="email">Correo Electrónico:</label>
         <input type="email" id="email" name="email" required placeholder="tuemail@ejemplo.com" />

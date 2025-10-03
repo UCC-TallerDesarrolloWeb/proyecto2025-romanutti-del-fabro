@@ -1233,3 +1233,10 @@ footer {
     box-shadow: 0 0 5px rgba(74, 158, 255, 0.3);
     
 }
+
+.error-message {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
