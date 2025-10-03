@@ -8,7 +8,7 @@ const generateCarCards = (dataToShow = carsData) => {
         const carsGrid = document.getElementById('cars-grid');
         carsGrid.innerHTML = '';
         
-        dataToShow.forEach((car, index) => {
+        dataToShow.forEach((car) => {
             const carCard = document.createElement('div');
             carCard.className = 'car-card';
             
@@ -26,7 +26,7 @@ const generateCarCards = (dataToShow = carsData) => {
             
             // Hacer toda la card clickeable
             carCard.style.cursor = 'pointer';
-            carCard.addEventListener('click', () => goToCar(index));
+            carCard.addEventListener('click', () => goToCar(car.id-1));
             
             carsGrid.appendChild(carCard);
         });

@@ -1,4 +1,5 @@
 const carsData = [    {
+        id: 1,
         brand: "Porsche",
         model: "911 GT2RS",
         year: 2021,
@@ -9,7 +10,8 @@ const carsData = [    {
         image: "assets/images/cars/1.jpeg",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac sapien sagittis, feugiat eros et, condimentum nibh. Quisque nec ligula semper, pulvinar justo non, tempor leo."
     },
-   {
+   {    
+        id: 2,
         brand: "BMW",
         model: "M4 Competition",
         year: 2023,
@@ -20,7 +22,8 @@ const carsData = [    {
         image: "assets/images/cars/2.jpg",
         description: "Deportivo alemán de alta performance con tecnología de punta y diseño agresivo."
     },
-   {
+   {    
+        id: 3,
         brand: "Ferrari",
         model: "F8 Tributo",
         year: 2022,
@@ -31,7 +34,8 @@ const carsData = [    {
         image: "assets/images/cars/3.jpg",
         description: "El Ferrari más potente y emocionante, con el motor V8 más premiado de la historia."
     },
-     {
+    {
+        id: 4,
         brand: "Lamborghini",
         model: "Huracán EVO",
         year: 2024,
@@ -43,6 +47,7 @@ const carsData = [    {
         description: "Superdeportivo italiano que combina elegancia y potencia en cada detalle."
     },
     {
+        id: 5,
         brand: "Porsche",
         model: "Cayenne",
         year: 2023,
@@ -54,6 +59,7 @@ const carsData = [    {
         description: "SUV deportiva de lujo que combina el rendimiento Porsche con la versatilidad de un vehículo familiar premium."
     },
     {
+        id: 6,
         brand: "Ford",
         model: "Mustang Dark Horse",
         year: 2024,
