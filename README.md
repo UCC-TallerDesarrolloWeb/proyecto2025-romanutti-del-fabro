@@ -123,8 +123,8 @@ El proyecto incluye wireframes completos para ambas versiones:
 
 | Autor                 | Rol                    | GitHub                                                 |
 | --------------------- | ---------------------- | ------------------------------------------------------ |
-| **Octavio Del Fabro** | Desarrollador Frontend | [@octaviodelfabro](https://github.com/octaviodelfabro) |
-| **Andrés Romanutti**  | Desarrollador Frontend | [@andresromanutti](https://github.com/andresromanutti) |
+| **Octavio Del Fabro** | Desarrollador Frontend | [@octidelfabro](https://github.com/octidelfabro) |
+| **Andrés Romanutti**  | Desarrollador Frontend | [@aromanutti](https://github.com/aromanutti) |
 
 ---
 
