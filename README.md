@@ -67,9 +67,14 @@ fast_cars/
 │       ├── cars-data.js    # Base de datos de vehículos
 │       ├── catalog-script.js # Funcionalidad del catálogo
 │       └── car-detail-script.js # Scripts de detalles
-└── wireframes/
-    ├── desktop/            # Wireframes para desktop
-    └── mobile/             # Wireframes para móviles
+├── wireframes/
+│   ├── desktop/            # Wireframes para desktop
+│   └── mobile/             # Wireframes para móviles
+│
+└── sketchs/
+    ├── desktop/            # Sketchs para desktop
+    └── mobile/             # Sketchs para móviles
+
 ```
 
 ## 🚀 Funcionalidades
