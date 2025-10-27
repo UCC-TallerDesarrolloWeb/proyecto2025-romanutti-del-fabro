@@ -1,0 +1,29 @@
+footer {
+    background-color: #1a1a1a;
+    color: #cccccc;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.footer-logo{
+    height: 100px;
+    margin: 5px 0;
+}
+
+li{
+    list-style: none;
+    margin: 10px 0;
+}   
+
+@media (max-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
