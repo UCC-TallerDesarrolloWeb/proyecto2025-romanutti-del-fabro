@@ -1,4 +1,6 @@
 import "@styles/header.css";
+import '@styles/sidebar.css';
+
 const Header = () => {
     return (
         <header className="header">
@@ -9,7 +11,7 @@ const Header = () => {
         <p>Menú</p>
         </div>
 
-        <a href="#"><h1 id="title">Fast Cars</h1></a>
+        <a href="/"><h1 id="title">Fast Cars</h1></a>
         <div></div>
         </header>
     );
