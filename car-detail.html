@@ -9,18 +9,55 @@
     <title id="page-title">Auto - FastCars</title>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <script src="./assets/js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body class="page-car-detail">
-    <header>
-        <div class="title-container">
-            <a href="index.html"><h1 class="title">FASTCARS</h1></a>
-        </div>
+    <!-- Overlay para cerrar navbar al hacer clic fuera -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Navbar lateral -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button class="close-btn" id="closeBtn">&times;</button>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <header class="header">
+      <div class="menu-button" id="menuBtn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="30"
+          height="20"
+          viewBox="0 0 50 50"
+        >
+          <path
+            d="M 3 9 A 1.0001 1.0001 0 1 0 3 11 L 47 11 A 1.0001 1.0001 0 1 0 47 9 L 3 9 z M 3 24 A 1.0001 1.0001 0 1 0 3 26 L 47 26 A 1.0001 1.0001 0 1 0 47 24 L 3 24 z M 3 39 A 1.0001 1.0001 0 1 0 3 41 L 47 41 A 1.0001 1.0001 0 1 0 47 39 L 3 39 z"
+          ></path>
+        </svg>
+        <p>Menú</p>
+      </div>
+
+      <a href="index.html"><h1 id="title">Fast Cars</h1></a>
+      <div></div>
+    </header>
+    
+    <div class="page-car-detail-content">
         <nav class="breadcrumb">
             <a href="index.html">HOME</a> / 
             <a href="catalogo.html">CATALOGO</a> / 
             <span id="breadcrumb-model">Cargando...</span>
         </nav>
-    </header>
+    </div>
     
     <main class="car-container">
         <div class="car-layout">
@@ -28,6 +65,7 @@
                 <img id="car-image" src="" alt="" class="car-image" />
             </div>
             <div class="car-info-section">
+                <h2 id="car-model" class="car-model">Cargando...</h2>
                 <div id="car-year-km" class="car-year-km"></div>
                 <div id="car-price" class="car-price"></div>
                 <div class="car-specs">

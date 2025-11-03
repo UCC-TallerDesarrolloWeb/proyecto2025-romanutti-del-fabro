@@ -1,3 +1,94 @@
+/* 
+===========================================
+FASTCARS - CSS UNIFICADO
+Proyecto 2025 - Primer Parcial
+===========================================
+*/
+
+/* === RESET Y CONFIGURACIÓN GLOBAL === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', 'Manrope', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================================
+   ESTILOS PARA PÁGINA PRINCIPAL (index.html)
+======================================== */
+
+/* === HEADER PRINCIPAL === */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.header > div:last-child {
+    width: 80px;
+    visibility: hidden;
+}
+
+#title {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    flex: 1;
+    background: linear-gradient(45deg, #ffffff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    text-decoration: underline;
+}
+
+.menu-button svg {
+    fill: white;
+    margin-right: 5px;
+}
+
+.menu-button p {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* === MAIN CONTENT === */
+main {
+    position: relative;
+    margin-top: 0;
+    flex: 1;
+}
 
 /* Para páginas específicas que usan flex layout */
 .contact-container {
@@ -457,30 +548,15 @@
 /* Especificidad para páginas de catálogo */
 .page-catalog {
     background-color: #1a1a1a;
-    min-height: 100vh;
+    
     display: block;
 }
 
-.page-catalog header {
-    padding: 40px 20px;
+.page-catalog-content {
+    padding: 50px 20px 40px 20px; /* Top padding para el header absoluto */
     text-align: center;
-    background-color: #1a1a1a;
 }
 
-.page-catalog .title {
-    font-size: 2.5em;
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 300;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-    background: linear-gradient(45deg, #ffffff, #e0e0e0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
 
 .title-container {
     margin-bottom: 30px;
@@ -490,8 +566,60 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin: 40px auto;
     gap: 0;
+}
+
+/* Estilos específicos para el input de búsqueda integrado con filtros */
+.search-input {
+    min-width: 250px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 1em;
+    outline: none;
+    margin: 10px auto;
+    display: block;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: #666;
+    font-style: italic;
+}
+
+.search-input:focus {
+    background-color: #e8f4fd;
+    box-shadow: 0 0 10px rgba(74, 158, 255, 0.3);
+}
+
+/* Estilos para labels del catálogo */
+.page-catalog-content label {
+    display: block;
+    color: #e0e0e0;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.page-catalog-content .filters-container label {
+    color: #4a9eff;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.price-filter-container label {
+    color: #cccccc;
+    font-size: 0.8em;
+    text-align: left;
+    margin-bottom: 3px;
+    font-weight: 500;
 }
 
 #search-bar {
@@ -551,62 +679,81 @@
 .filters-container {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     margin-bottom: 40px;
     flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
 }
 
 .filter-dropdown {
     padding: 12px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #f5f5f5;
     color: #333;
     font-size: 1em;
     cursor: pointer;
     min-width: 180px;
     outline: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .filter-dropdown:hover {
     background-color: #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Nuevo contenedor para filtros de precio */
+.filter-dropdown:focus {
+    background-color: #e8f4fd;
+    box-shadow: 0 0 10px rgba(74, 158, 255, 0.3);
+}
+
+/* Contenedor para filtros de precio - igual que otros filtros */
 .price-filter-container {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
-    background-color: #f5f5f5;
-    border-radius: 5px;
-    padding: 5px;
     min-width: 180px;
-    transition: background-color 0.3s ease;
 }
 
-.price-filter-container:hover {
-    background-color: #e0e0e0;
+.price-inputs-group {
+    display: flex;
+    gap: 8px;
+    width: 100%;
 }
 
 .price-input {
+    padding: 12px 20px;
     border: none;
-    background: transparent;
+    border-radius: 8px;
+    background-color: #f5f5f5;
     color: #333;
     font-size: 1em;
-    padding: 7px 15px;
+    cursor: pointer;
+    min-width: 90px;
     outline: none;
-    width: 100%;
-    border-radius: 3px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .price-input::placeholder {
     color: #666;
-    font-size: 0.9em;
+}
+
+.price-input:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .price-input:focus {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #e8f4fd;
+    box-shadow: 0 0 10px rgba(74, 158, 255, 0.3);
 }
 
 .catalog-container {
@@ -715,9 +862,10 @@
 
 .page-car-detail {
     background-color: #1a1a1a;
+    
 }
 
-.page-car-detail header {
+.page-car-detail-content {
     padding: 20px 0;
     text-align: center;
 }
@@ -827,12 +975,12 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.page-contact header {
-    padding: 10px 20px;
-    text-align: center;
-    background-color: #1a1a1a;
+.page-contact-content{
+    margin-top: 30px;
 }
 
 .page-contact .title {
@@ -854,7 +1002,7 @@
     flex: 1;
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 10px 20px;
     text-align: center;
 }
 
@@ -961,6 +1109,17 @@
     line-height: 1.6;
 }
 
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background-color: #1a1a1a;
+    color: #cccccc;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333;
+}
 
 /* ========================================
    RESPONSIVE DESIGN
@@ -972,7 +1131,16 @@
     }
     
     .page-catalog .title {
-        font-size: 2em;
+        font-size: 1.6em;
+    }
+    
+    .page-catalog-content {
+        padding: 100px 10px 20px 10px;
+    }
+    
+    .search-input {
+        min-width: 200px;
+        margin: 20px auto;
     }
     
     .search-bar {
@@ -1005,10 +1173,19 @@
     .car-layout {
         flex-direction: column;
         gap: 20px;
+        padding: 20px;
     }
     
     .car-info-section {
         padding-left: 0;
+    }
+    
+    .car-info-section h1 {
+        font-size: 2em;
+    }
+    
+    .page-car-detail-content {
+        padding: 100px 10px 20px 10px;
     }
     
     .breadcrumb {
@@ -1062,6 +1239,45 @@
         padding: 20px 10px;
     }
     
+    .page-catalog-content {
+        padding: 80px 10px 20px 10px;
+    }
+    
+    .page-catalog .title {
+        font-size: 1.2em;
+    }
+    
+    .search-input {
+        min-width: 200px;
+        width: 90%;
+        margin: 15px auto;
+        padding: 12px 15px;
+    }
+    
+    .page-car-detail-content {
+        padding: 80px 10px 20px 10px;
+    }
+    
+    .page-car-detail-content .title {
+        font-size: 1.8em;
+    }
+    
+    .car-container {
+        padding: 20px 10px;
+    }
+    
+    .car-layout {
+        padding: 15px;
+    }
+    
+    .car-info-section h1 {
+        font-size: 1.5em;
+    }
+    
+    .car-price {
+        font-size: 1.5em;
+    }
+    
     .search-container {
         flex-direction: column;
         gap: 10px;
@@ -1111,25 +1327,6 @@
         width: 100%;
         text-align: center;
     }
-}
-
-/* Estilos específicos para el input de búsqueda integrado con filtros */
-.search-input {
-    min-width: 250px;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 10px;
-}
-
-.search-input::placeholder {
-    color: #666;
-    font-style: italic;
-}
-
-.search-input:focus {
-    background-color: #e8f4fd;
-    box-shadow: 0 0 5px rgba(74, 158, 255, 0.3);
-    
 }
 
 .error-message {

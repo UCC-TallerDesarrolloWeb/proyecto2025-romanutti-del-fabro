@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Actualizar el contenido de la página
         document.getElementById('page-title').textContent = `${car.brand} ${car.model} - FastCars`;
+        document.getElementById('car-model').textContent = `${car.brand} ${car.model}`;
         document.getElementById('breadcrumb-model').textContent = car.model;
         document.getElementById('car-image').src = car.image;
         document.getElementById('car-image').alt = `${car.brand} ${car.model}`;
