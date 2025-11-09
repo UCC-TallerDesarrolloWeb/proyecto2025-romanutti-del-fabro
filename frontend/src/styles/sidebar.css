@@ -42,14 +42,6 @@
     background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
 }
 
-.sidebar-header h3 {
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0;
-}
 
 .close-btn {
     background: none;
@@ -98,6 +90,12 @@
     overflow: hidden;
 }
 
+.sidebar-logo{
+    width: 100px;
+
+    display: block;
+}
+
 .sidebar-menu a::before {
     content: '';
     position: absolute;
@@ -122,19 +120,4 @@
 
 .sidebar-menu a:active {
     background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Responsive para Sidebar */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 280px;
-        left: -280px;
-    }
-}
-
-@media (max-width: 480px) {
-    .sidebar {
-        width: 100%;
-        left: -100%;
-    }
 }

@@ -16,19 +16,19 @@ const Home = () => {
             <p>Explora nuestra colección de autos rápidos y elegantes. Encuentra el auto perfecto que se adapte a tu estilo y necesidades.</p>
             <p id="subtitle">Últimos Ingresos</p>
             <div className="last-cars-grid">
-                <div onClick={() => { location.href='car-detail.html?id=0' }}>
+                <div onClick={() => { location.href='auto/1' }}>
                     <img src="images/cars/1.jpeg" alt="Auto Deportivo 1" />
                     <p>PORSCHE 911 GT2RS</p>
                 </div>
-                <div onClick={() => { location.href='car-detail.html?id=1' }}>
+                <div onClick={() => { location.href='auto/2' }}>
                     <img src="images/cars/2.jpg" alt="Auto Deportivo 2" />
                     <p>BMW M4 COMPETITION</p>
                 </div>
-                <div onClick={() => { location.href='car-detail.html?id=2' }}>
+                <div onClick={() => { location.href='auto/3' }}>
                     <img src="images/cars/3.jpg" alt="Auto Deportivo 3" />
                     <p>FERRARI F8 TRIBUTO</p>
                 </div>
-                <div onClick={() => { location.href='car-detail.html?id=3' }}>
+                <div onClick={() => { location.href='auto/4' }}>
                     <img src="images/cars/4.jpg" alt="Auto Deportivo 4"/>
                     <p>LAMBORGHINI HURACAN EVO</p>
                 </div>

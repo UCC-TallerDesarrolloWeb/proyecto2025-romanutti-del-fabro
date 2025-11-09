@@ -1,4 +1,5 @@
 import "@styles/footer.css";
+import logo from "@assets/FastCars.svg";
 
 const Footer = () => {
     return  (
@@ -7,7 +8,7 @@ const Footer = () => {
 
             <div>
                 <p>&copy; 2025 Fast Cars</p>
-                <img src="/FastCars.svg" alt="Fast Cars Logo" className="footer-logo" />
+                <img src={logo} alt="Fast Cars Logo" className="footer-logo" />
             
             </div>
             <div>

@@ -114,36 +114,3 @@
     opacity: 1;
 }
 
-/* Responsive para Content Section */
-@media (max-width: 768px) {
-    .last-cars-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        margin-top: 20px;
-    }
-    
-    .last-cars-grid img {
-        height: 180px;
-    }
-    
-    .last-cars-grid p {
-        font-size: 1.1em;
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .last-cars-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .last-cars-grid img {
-        height: 160px;
-    }
-    
-    .last-cars-grid p {
-        font-size: 1em;
-        padding: 12px;
-    }
-}

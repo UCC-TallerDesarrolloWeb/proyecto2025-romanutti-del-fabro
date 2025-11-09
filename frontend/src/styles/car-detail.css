@@ -4,12 +4,14 @@
 
 .page-car-detail {
     background-color: #1a1a1a;
+    
 }
 
 .page-car-detail header {
     padding: 20px 0;
     text-align: center;
 }
+
 
 .page-car-detail .title {
     font-size: 2.5em;
@@ -33,7 +35,10 @@
 .page-car-detail .breadcrumb span {
     text-decoration: underline;
 }
-
+.page-car-detail-content{
+    margin-top: 50px;
+    text-align: center;
+}
 .car-container {
     padding: 40px 20px;
     max-width: 1200px;
@@ -104,20 +109,3 @@
     margin: 0;
 }
 
-/* Responsive para Car Details */
-@media (max-width: 768px) {
-    .car-layout {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .car-info-section {
-        padding-left: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .page-car-detail header {
-        padding: 20px 10px;
-    }
-}

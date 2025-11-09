@@ -21,9 +21,3 @@ li{
     list-style: none;
     margin: 10px 0;
 }   
-
-@media (max-width: 600px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-  }
-}
