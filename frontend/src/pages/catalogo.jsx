@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "@styles/catalog.css";
+import "@styles/catalog.scss";
 import { carsData } from "../data/cars-data";
 
 const Catalogo = () => {

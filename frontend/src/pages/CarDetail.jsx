@@ -1,7 +1,7 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { carsData } from "../data/cars-data";
-import "@styles/car-detail.css";
+import "@styles/car-detail.scss";
 
 const CarDetail = () => {
   const { id } = useParams(); // Obtiene el ID de la URL

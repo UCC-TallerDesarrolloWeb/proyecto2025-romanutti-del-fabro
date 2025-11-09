@@ -1,4 +1,4 @@
-import "@styles/footer.css";
+import "@styles/footer.scss";
 import logo from "@assets/FastCars.svg";
 
 const Footer = () => {

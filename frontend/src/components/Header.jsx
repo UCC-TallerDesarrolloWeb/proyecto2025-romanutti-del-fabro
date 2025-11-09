@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import "@styles/header.css";
-import "@styles/sidebar.css";
+import "@styles/header.scss";
+import "@styles/sidebar.scss";
 import logo from "@assets/FastCars.svg";
 const Header = () => {
   // Referencias a los elementos del DOM

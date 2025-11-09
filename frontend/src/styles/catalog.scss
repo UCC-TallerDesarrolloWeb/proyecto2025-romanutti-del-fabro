@@ -5,15 +5,31 @@
 /* Especificidad para páginas de catálogo */
 .page-catalog {
     background-color: #1a1a1a;
-    
     display: block;
-}
 
-.page-catalog-content {
-    padding: 50px 20px 40px 20px; /* Top padding para el header absoluto */
-    text-align: center;
-}
+    &-content {
+        padding: 50px 20px 40px 20px; /* Top padding para el header absoluto */
+        text-align: center;
 
+        label {
+            display: block;
+            color: #e0e0e0;
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .filters-container label {
+            color: #4a9eff;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+    }
+}
 
 .title-container {
     margin-bottom: 30px;
@@ -40,43 +56,31 @@
     margin: 10px auto;
     display: block;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &::placeholder {
+        color: #666;
+        font-style: italic;
+    }
+
+    &:focus {
+        background-color: #e8f4fd;
+        box-shadow: 0 0 10px rgba(74, 158, 255, 0.3);
+    }
 }
 
-.search-input::placeholder {
-    color: #666;
-    font-style: italic;
-}
+.price-filter-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    min-width: 180px;
 
-.search-input:focus {
-    background-color: #e8f4fd;
-    box-shadow: 0 0 10px rgba(74, 158, 255, 0.3);
-}
-
-/* Estilos para labels del catálogo */
-.page-catalog-content label {
-    display: block;
-    color: #e0e0e0;
-    font-size: 1em;
-    font-weight: 600;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-align: center;
-}
-
-.page-catalog-content .filters-container label {
-    color: #4a9eff;
-    font-size: 0.9em;
-    margin-bottom: 5px;
-    margin-top: 0;
-}
-
-.price-filter-container label {
-    color: #cccccc;
-    font-size: 0.8em;
-    text-align: left;
-    margin-bottom: 3px;
-    font-weight: 500;
+    label {
+        color: #cccccc;
+        font-size: 0.8em;
+        text-align: left;
+        margin-bottom: 3px;
+        font-weight: 500;
+    }
 }
 
 #search-bar {
@@ -104,10 +108,10 @@
     height: 50px;
     box-sizing: border-box;
     transition: background-color 0.3s ease;
-}
 
-.search-button:hover {
-    background-color: #e0e0e0;
+    &:hover {
+        background-color: #e0e0e0;
+    }
 }
 
 .breadcrumb {
@@ -117,20 +121,20 @@
     letter-spacing: 1px;
     margin-top: 30px;
     margin-bottom: 30px;
-}
 
-.breadcrumb a {
-    color: #cccccc;
-    transition: color 0.3s ease;
-}
+    a {
+        color: #cccccc;
+        transition: color 0.3s ease;
 
-.breadcrumb a:hover {
-    color: white;
-}
+        &:hover {
+            color: white;
+        }
+    }
 
-.breadcrumb span {
-    color: white;
-    font-weight: bold;
+    span {
+        color: white;
+        font-weight: bold;
+    }
 }
 
 .filters-container {
@@ -160,24 +164,16 @@
     min-width: 180px;
     outline: none;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
 
-.filter-dropdown:hover {
-    background-color: #e0e0e0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+    &:hover {
+        background-color: #e0e0e0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
-.filter-dropdown:focus {
-    background-color: #e8f4fd;
-    box-shadow: 0 0 10px rgba(74, 158, 255, 0.3);
-}
-
-/* Contenedor para filtros de precio - igual que otros filtros */
-.price-filter-container {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    min-width: 180px;
+    &:focus {
+        background-color: #e8f4fd;
+        box-shadow: 0 0 10px rgba(74, 158, 255, 0.3);
+    }
 }
 
 .price-inputs-group {
@@ -197,20 +193,20 @@
     min-width: 90px;
     outline: none;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
 
-.price-input::placeholder {
-    color: #666;
-}
+    &::placeholder {
+        color: #666;
+    }
 
-.price-input:hover {
-    background-color: #e0e0e0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+    &:hover {
+        background-color: #e0e0e0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
-.price-input:focus {
-    background-color: #e8f4fd;
-    box-shadow: 0 0 10px rgba(74, 158, 255, 0.3);
+    &:focus {
+        background-color: #e8f4fd;
+        box-shadow: 0 0 10px rgba(74, 158, 255, 0.3);
+    }
 }
 
 .catalog-container {
@@ -234,28 +230,28 @@
     position: relative;
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.15);
-}
 
-.car-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    border-color: rgba(255, 255, 255, 0.3);
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        border-color: rgba(255, 255, 255, 0.3);
+
+        img, .car-image {
+            transform: scale(1.05);
+        }
+    }
+
+    img, .car-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
 }
 
 .car-image-container {
     position: relative;
     overflow: hidden;
-}
-
-.car-card img, .car-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.car-card:hover img, .car-card:hover .car-image {
-    transform: scale(1.05);
 }
 
 .car-info {
@@ -293,8 +289,8 @@
     font-weight: bold;
     margin: 0;
 }
-/* BOTÓN DE RESETEAR FILTROS*/
 
+/* BOTÓN DE RESETEAR FILTROS*/
 .reset-filters-btn {
     background-color: #ff4d4d !important;
     color: white !important;
@@ -308,15 +304,15 @@
     box-shadow: 0 4px 10px rgba(255, 77, 77, 0.3);
     text-transform: uppercase;
     letter-spacing: 1px;
-}
 
-.reset-filters-btn:hover {
-    background-color: #cc0000 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(255, 77, 77, 0.5);
-}
+    &:hover {
+        background-color: #cc0000 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(255, 77, 77, 0.5);
+    }
 
-.reset-filters-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 10px rgba(255, 77, 77, 0.3);
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 10px rgba(255, 77, 77, 0.3);
+    }
 }

@@ -1,5 +1,5 @@
 import ContactForm from "@components/ContactForm";
-import "@styles/contact.css"
+import "@styles/contact.scss"
 const Contact = () => {
     return (
         <div className="page-contact">

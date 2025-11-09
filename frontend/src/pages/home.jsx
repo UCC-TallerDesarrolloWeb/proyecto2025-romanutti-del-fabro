@@ -1,6 +1,6 @@
-import "@styles/hero.css";
-import "@styles/content.css";
-import "@styles/cta.css";
+import "@styles/hero.scss";
+import "@styles/content.scss";
+import "@styles/cta.scss";
 const Home = () => {
     return (
         <>
