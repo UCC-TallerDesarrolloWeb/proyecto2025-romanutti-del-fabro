@@ -7,7 +7,7 @@ const carsData = [    {
         km: "70.000 km",
         engine: "6 cilindros 3.8",
         transmission: "Tracción Trasera",
-        image: "/images/cars/1.jpeg",
+        image: "assets/images/cars/1.jpeg",
         description: "El Porsche 911 GT2RS es la máxima expresión de rendimiento y exclusividad en la línea 911."
     },
    {    
