@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "@styles/catalog.scss";
-import { carsData } from "../data/cars-data";
+import { carsData } from "@data/cars-data";
 
 const Catalogo = () => {
   const navigate = useNavigate();
