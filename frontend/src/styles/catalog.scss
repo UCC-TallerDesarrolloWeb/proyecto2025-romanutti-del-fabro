@@ -178,6 +178,11 @@
     margin: 0 auto;
 }
 
+.cars-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
 
 .car-card {
     background-color: #1a1a1a;

@@ -1,14 +1,38 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
-import { useEffect } from "react";
-import { carsData } from "../data/cars-data";
+import { useState, useEffect } from "react";
 import "@styles/car-detail.scss";
 
 const CarDetail = () => {
   const { id } = useParams(); // Obtiene el ID de la URL
   const navigate = useNavigate(); // Para navegar programáticamente
+  const [car, setCar] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // Buscar el auto por ID
-  const car = carsData.find((car) => car.id === parseInt(id));
+  /**
+   * Carga los datos del auto específico basado en el ID de la URL
+   * @effect Se ejecuta cuando cambia el ID en la URL
+   * @dependencies {string} id - El ID del auto obtenido de los parámetros de la URL
+   * @returns {void} Actualiza el estado del auto y el estado de carga
+   */
+  useEffect(() => {
+    const fetchCarData = async () => {
+      try {
+        const response = await fetch("/data/cars-data.json");
+        if (!response.ok) {
+          throw new Error("Error al cargar los datos de los autos");
+        }
+        const data = await response.json();
+        const foundCar = data.find((c) => c.id === parseInt(id));
+        setCar(foundCar);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCarData();
+  }, [id]);
 
   /**
    * Actualiza el título de la página dinámicamente
@@ -34,6 +58,10 @@ const CarDetail = () => {
       currency: "USD",
     }).format(price);
   };
+
+  if (loading) {
+    return <div className="page-car-detail"><p>Cargando...</p></div>;
+  }
 
   // Si no se encuentra el auto, mostrar mensaje de error
   if (!car) {

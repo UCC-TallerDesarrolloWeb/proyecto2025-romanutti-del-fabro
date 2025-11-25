@@ -1,12 +1,41 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "@styles/catalog.scss";
-import { carsData } from "@data/cars-data";
 
 const Catalogo = () => {
   const navigate = useNavigate();
-  const [cars, setCars] = useState(carsData);
-  
+  const [allCars, setAllCars] = useState([]);
+  const [cars, setCars] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  /**
+   * Carga los datos de los autos desde un archivo JSON simulando una petición a una API
+   * @effect Se ejecuta una sola vez al montar el componente
+   * @dependencies [] - Array vacío para ejecutar solo al inicio
+   * @returns {void} Actualiza el estado de allCars y cars con los datos obtenidos
+   */
+  useEffect(() => {
+    // Simular la carga de datos desde un archivo JSON o una API
+    const fetchCarsData = async () => {
+      try {
+        const response = await fetch("/data/cars-data.json");
+        if (!response.ok) {
+          throw new Error("Error al cargar los datos de los autos");
+        }
+        const data = await response.json();
+        setAllCars(data);
+        setCars(data);
+        console.log(data);
+      } catch (error) {
+        console.error(error);
+      } finally{
+        setLoading(false);
+      }
+    }
+
+    fetchCarsData();
+  }, []);
+
   // Cargar preferencias desde localStorage al iniciar
   const loadFilters = () => {
     const savedFilters = localStorage.getItem("catalogFilters");
@@ -50,6 +79,8 @@ const Catalogo = () => {
     localStorage.setItem("catalogFilters", JSON.stringify(filters));
   }, [searchTerm, selectedBrand, selectedYear, minPrice, maxPrice]);
 
+  
+
   /**
    * Filtra los autos según los criterios de búsqueda y filtros aplicados
    * @effect Se ejecuta cada vez que cambian los criterios de búsqueda o filtros
@@ -61,7 +92,7 @@ const Catalogo = () => {
    * @returns {void} Actualiza el estado de cars con los resultados filtrados
    */
   useEffect(() => {
-    let filteredCars = [...carsData];
+    let filteredCars = [...allCars];
 
     // Filtrar por búsqueda de modelo
     if (searchTerm) {
@@ -97,7 +128,7 @@ const Catalogo = () => {
     }
 
     setCars(filteredCars);
-  }, [searchTerm, selectedBrand, selectedYear, minPrice, maxPrice]);
+  }, [searchTerm, selectedBrand, selectedYear, minPrice, maxPrice, allCars]);
 
   /**
    * Formatea el precio con separadores de miles y símbolo de moneda, utilizando una funcion propia de javascript
@@ -255,6 +286,9 @@ const Catalogo = () => {
       {/* Grid de autos */}
       <div className="catalog-container">
         <div className="cars-grid" id="cars-grid">
+          {loading ? (
+            <p>Cargando autos...</p>
+          ) : null}
           {cars.length > 0 ? (
             cars.map((car) => (
               <div
