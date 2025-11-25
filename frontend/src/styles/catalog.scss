@@ -31,17 +31,8 @@
     }
 }
 
-.title-container {
-    margin-bottom: 30px;
-}
 
-.search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px auto;
-    gap: 0;
-}
+
 
 /* Estilos específicos para el input de búsqueda integrado con filtros */
 .search-input {
@@ -95,24 +86,6 @@
     box-sizing: border-box;
 }
 
-.search-button {
-    padding: 15px 20px;
-    border: none;
-    border-radius: 0 25px 25px 0;
-    background-color: #f5f5f5;
-    cursor: pointer;
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    box-sizing: border-box;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-        background-color: #e0e0e0;
-    }
-}
 
 .breadcrumb {
     font-size: 1.2em;
@@ -146,12 +119,6 @@
     align-items: flex-start;
 }
 
-.filter-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 180px;
-}
 
 .filter-dropdown {
     padding: 12px 20px;
@@ -176,11 +143,7 @@
     }
 }
 
-.price-inputs-group {
-    display: flex;
-    gap: 8px;
-    width: 100%;
-}
+
 
 .price-input {
     padding: 12px 20px;
@@ -215,12 +178,6 @@
     margin: 0 auto;
 }
 
-.catalogo-grid, .cars-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
-}
 
 .car-card {
     background-color: #1a1a1a;
