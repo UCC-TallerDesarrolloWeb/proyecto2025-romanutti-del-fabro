@@ -202,17 +202,6 @@ const Catalogo = () => {
             <button
               onClick={resetFilters}
               className="reset-filters-btn"
-              style={{
-                backgroundColor: "#ff4d4d",
-                color: "white",
-                border: "none",
-                padding: "10px 20px",
-                borderRadius: "8px",
-                cursor: "pointer",
-                fontSize: "1em",
-                fontWeight: "bold",
-                transition: "all 0.3s ease",
-              }}
               onMouseOver={(e) => e.target.style.backgroundColor = "#cc0000"}
               onMouseOut={(e) => e.target.style.backgroundColor = "#ff4d4d"}
             >
